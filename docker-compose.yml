@@ -1,0 +1,25 @@
+services:
+  # Service name for the maintenance tool
+  immich-slimmer:
+    # Build the image using the Dockerfile located in the current directory
+    build: .
+    # Assign a specific name to the container for easier logging and tracking
+    container_name: immich_slimmer
+    # Set environment variables used by the resize.sh script
+    environment:
+      # Internal or external URL of your Immich instance
+      - IMMICH_URL=http://immich_server:2283
+      # Personal API Key generated in Immich User Settings
+      - IMMICH_API_KEY=your_api_key_here
+      # JPEG compression level (1-100)
+      - QUALITY=80
+      - MAX_WIDTH=1920
+      - MAX_HEIGHT=1920
+      # Minimum file size to trigger optimization (e.g., 2M, 5M, 500k)
+      - MIN_SIZE=2M
+    # Map the host directory to the container to access your photos
+    volumes:
+      # [Host Path]:[Container Path]
+      - /path/to/your/immich/upload:/data
+    # Do not restart automatically; ideal for manual execution or Cron jobs
+    restart: "no"
