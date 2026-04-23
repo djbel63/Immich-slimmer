@@ -30,18 +30,18 @@ This tool has been specifically tested and verified with **Immich version 2.7.4*
 ## 🚀 Quick Start
 
 1. **Clone the repository**:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/djbel63/immich-slimmer.git
    cd immich-slimmer
-   \`\`\`
+   ```
 
 2. **Configure your Docker Compose**:
    Update the \`volumes\` section to point to your Immich **upload** directory and paste your **API Key**.
 
 3. **Run the optimizer**:
-   \`\`\`bash
+   ```bash
    docker compose up -d --build
-   \`\`\`
+   ```
 
 ## ⚠️ Important Notes
 
