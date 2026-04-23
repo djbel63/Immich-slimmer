@@ -11,6 +11,10 @@ A lightweight, automated tool designed to "slim down" your Immich library. It id
 - **Auto-Refresh**: Automatically tells Immich to re-scan the library so the new file sizes show up in the App and Web UI immediately.
 - **Metadata Integrity**: Uses ImageMagick to ensure all EXIF data (Date, GPS, Camera info) remains intact.
 - **Lightweight**: Based on Alpine Linux, keeping the footprint under 50MB.
+- 
+## ✅ Compatibility
+
+This tool has been specifically tested and verified with **Immich version 2.7.4**.
 
 ## ⚙️ Configuration (Environment Variables)
 
