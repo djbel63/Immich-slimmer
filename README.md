@@ -39,14 +39,6 @@ A lightweight, automated tool designed to "slim down" your Immich library. It id
    docker compose up -d --build
    \`\`\`
 
-## ⏰ Automation (Nightly Task)
-
-To keep your library slim automatically, add this to your system's \`crontab -e\` to run every night at 3:00 AM:
-
-\`\`\`bash
-0 3 * * * cd /home/dockerapps/immich-slimmer && /usr/local/bin/docker compose up
-\`\`\`
-
 ## ⚠️ Important Notes
 
 - **Destructive Operation**: This tool modifies original files within your \`/upload\` directory. Always ensure you have a recent backup before running it for the first time.
